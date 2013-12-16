@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tagging"
+    android:versionCode="1"
+    android:versionName="1.0" >
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.tagging.MainScreen"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.tagging.Signup"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name="com.example.tagging.Login"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name="com.example.tagging.LoggedIn"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name="com.example.tagging.AddTag"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name="com.example.tagging.AddPhoto"
+            android:label="@string/app_name">
+            <intent-filter>
+        		<action android:name="android.intent.action.SEND"/>
+        		<category android:name="android.intent.category.DEFAULT"/>
+        		<data android:mimeType="image/*"/>
+    		</intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.tagging.TagPage"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name="com.example.tagging.PhotoPage"
+            android:label="@string/app_name">
+        </activity>
+            
+    </application>
+
+</manifest>
